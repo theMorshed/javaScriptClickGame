@@ -28,6 +28,7 @@ const start = () => {
     stat.textContent = count;
     // make click button clickable
     buttonClick.removeAttribute('disabled');
+    buttonClick.classList.replace('bg-gray-700', 'bg-lime-700');
     // start counting
     starCounting();
 }
@@ -41,7 +42,9 @@ const starCounting = () => {
         }else {
             stat.textContent = 'You Lost!';
         }
+        // make button disabled and change background color of button
         buttonClick.setAttribute('disabled', true);
+        buttonClick.classList.replace('bg-lime-700', 'bg-gray-700');
     }, 2000);
 }
 
